@@ -1,0 +1,145 @@
+* {
+    
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    height: 100svh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100svh;
+}
+
+main {
+    padding: 0;
+    margin: 0;
+    height: 100dvh;    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: monospace;
+}
+
+canvas {
+    position: relative;
+    z-index: -100;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    position: sticky;
+    grid-template-columns: auto-fill;
+    grid-template-rows: 1fr;
+    width: 100svw;
+    justify-content: right;
+}
+
+.menu-item{
+    text-align: right;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0 2rem;
+    position: relative;
+    gap: 2em;
+}
+
+li {
+    list-style-type: none;
+    max-width: fit-content;
+    backdrop-filter: blur(30px);
+}
+
+.canvas_body {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item a:hover{
+    text-decoration-color: yellow;
+    text-decoration: line-through;
+}
+
+.page-title {
+    font-family: monospace;
+    font-size: clamp(4rem, 72px, 6rem);
+    font-weight: 700;
+    color: black;
+    position: absolute;
+}
+p {
+    position: relative;
+    max-width: 50dvw;
+    text-align: justify;
+    font-size: clamp(1rem, 16px, 2rem);
+    line-height: 1.5rem;
+}
+
+.page-title a{
+    text-decoration: none;
+    font-family: monospace;
+    font-size: clamp(4rem, 72px, 6rem);
+    font-weight: 500;
+    color: black;
+}
+
+/* section {
+    position: relative;
+    z-index: 100;
+} */
+
+.content-grid {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr 2fr);
+}
+
+h1 {
+    font-family: monospace;
+    font-size: clamp(3rem, 68px, 10rem);
+    font-weight: 700;
+    color: black;
+    padding: 0;
+}
+
+h2 {
+    font-family: monospace;
+    font-size: clamp(2rem, 48px, 6rem);
+    font-weight: 500;
+    color: black;
+}
+
+h3 {
+    font-family: monospace;
+    font-size: clamp(1.5rem, 24px, 4rem);
+    font-weight: 400;
+    color: black;
+}
+
+img {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.project-info {
+    padding: 0 10dvw 0 20dvw;
+}

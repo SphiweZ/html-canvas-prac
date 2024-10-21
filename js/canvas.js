@@ -13,11 +13,11 @@ const pointer = {
     y: .1 * window.innerHeight,
 }
 const params = {
-    pointsNumber: 20,
-    widthFactor: .3,
-    mouseThreshold: .2,
+    pointsNumber: 15,
+    widthFactor: .5,
+    mouseThreshold: .8,
     spring: .4,
-    friction: .5
+    friction: .5,
 };
 
 const trail = new Array(params.pointsNumber);
@@ -25,7 +25,7 @@ for (let i = 0; i < params.pointsNumber; i++) {
     trail[i] = {
         x: pointer.x,
         y: pointer.y,
-        dx: 0,
+        dx: 1,
         dy: 0,
     }
 }
@@ -56,8 +56,8 @@ function update(t) {
 
     // for intro motion
     if (!mouseMoved) {
-        pointer.x = (.5 + .3 * Math.cos(.002 * t) * (Math.sin(.005 * t))) * window.innerWidth;
-        pointer.y = (.5 + .2 * (Math.cos(.005 * t)) + .1 * Math.cos(.01 * t)) * window.innerHeight;
+        pointer.x = (.5 + .3 * Math.cos(.02 * t) * (Math.sin(.05 * t))) * window.innerWidth;
+        pointer.y = (.5 + .2 * (Math.cos(.05 * t)) + .1 * Math.cos(.01 * t)) * window.innerHeight;
     }
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -84,7 +84,7 @@ function update(t) {
         ctx.stroke();
     }
     ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
-    ctx.strokeStyle = "beige"
+    ctx.strokeStyle = "yellow"
     ctx.stroke();
     
     window.requestAnimationFrame(update);
