@@ -1,24 +1,23 @@
-* {
-    
+::before,
+::after {
+    box-sizing:border-box
 }
 
 html {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    height: 100svh;
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100svh;
+    height: 100%;
 }
 
 main {
     padding: 0;
-    margin: 0;
-    height: 100dvh;    
+    margin: 0; 
 }
 
 a {
@@ -83,12 +82,14 @@ li {
     color: black;
     position: absolute;
 }
+
 p {
     position: relative;
-    max-width: 50dvw;
+    max-width: 60dvw;
     text-align: justify;
     font-size: clamp(1rem, 16px, 2rem);
     line-height: 1.5rem;
+    font-family: monospace;
 }
 
 .page-title a{
@@ -141,5 +142,39 @@ img {
 }
 
 .project-info {
-    padding: 0 10dvw 0 20dvw;
+    padding: 0 0 0 10dvw;
+}
+
+video {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+footer {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    gap: 10dvw;
+}
+
+.footer-copyright {
+    text-align: left;
+    font-family: monospace;
+    font-size: clamp(0.7rem, 10px, 1rem);
+    line-height: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-aside {
+    position: relative;
+    text-align: right;
+    font-family: monospace;
+    line-height: 1rem;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(0.7rem, 10px, 1rem);
 }
