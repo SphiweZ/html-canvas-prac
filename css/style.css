@@ -153,28 +153,24 @@ video {
 }
 
 footer {
-    padding: 0;
+    padding: 0 0 0 15dvw;
     margin: 0;
     display: flex;
-    position: absolute;
-    gap: 10dvw;
+    position: relative;
 }
 
 .footer-copyright {
     text-align: left;
-    font-family: monospace;
-    font-size: clamp(0.7rem, 10px, 1rem);
     line-height: 1rem;
     margin: 0;
     padding: 0;
+    font-family: monospace;
+    font-size: clamp(0.7rem, 10px, 1rem);
 }
 
-.footer-aside {
-    position: relative;
+.footer-copyright a {
     text-align: right;
-    font-family: monospace;
     line-height: 1rem;
     margin: 0;
     padding: 0;
-    font-size: clamp(0.7rem, 10px, 1rem);
 }
