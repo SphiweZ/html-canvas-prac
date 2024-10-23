@@ -2,6 +2,9 @@
 ::after {
     box-sizing:border-box
 }
+* {
+    max-height: 100%;
+}
 
 html {
     padding: 0;
@@ -12,7 +15,6 @@ html {
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
 main {
@@ -27,8 +29,8 @@ a {
 }
 
 canvas {
-    position: relative;
-    z-index: -100;
+    z-index: 10;
+    height: 100%;
 }
 
 nav {
@@ -40,6 +42,7 @@ nav {
     grid-template-rows: 1fr;
     width: 100svw;
     justify-content: right;
+    z-index: 100;
 }
 
 .menu-item{
@@ -68,6 +71,9 @@ li {
     position: absolute;
     padding: 0;
     margin: 0;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-item a:hover{
@@ -145,18 +151,17 @@ img {
     padding: 0 0 0 10dvw;
 }
 
-video {
+img {
     display: block;
     padding: 0;
     margin: 0;
     width: 100%;
+    height: 100dvh;
 }
 
 footer {
     padding: 0 0 0 15dvw;
-    margin: 0;
-    display: flex;
-    position: relative;
+    margin-top: auto;
 }
 
 .footer-copyright {

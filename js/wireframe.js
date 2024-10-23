@@ -1,6 +1,6 @@
 
 let cols, rows;
-let scl = 20;
+let scl = 30;
 let w = 2000;
 let h = 500;
 
