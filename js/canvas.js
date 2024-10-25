@@ -84,7 +84,7 @@ function update(t) {
         ctx.stroke();
     }
     ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
-    ctx.strokeStyle = "yellow"
+    ctx.strokeStyle = "red"
     ctx.stroke();
     
     window.requestAnimationFrame(update);

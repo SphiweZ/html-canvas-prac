@@ -9,7 +9,21 @@
 </head>
 
 <body>
-    <div>
+    <div id="loading-screen">
+        <!-- Spinner Loader -->
+        <!-- <div class="loader spinner"></div> -->
+        
+        <!-- Bouncing Dots Loader -->
+        <!-- <div class="loader bouncing-dots">
+          <div></div><div></div><div></div>
+        </div> -->
+        
+        <!-- Pulse Loader -->
+        <div class="loader pulse"></div>
+        
+        <p>Loading, please wait...</p>
+      </div>
+    <div id="main-content" class="hidden">
 
         <div class="canvas_body">
 
@@ -37,11 +51,12 @@
             </nav>
 
             <main>
+
                 <div class="project-info">
                     <h1>Narratives from the fringes*</h1>
-                    <p>Weaving Stories through Fashion, Visual Design, and Social Research</p>
+                    <p>Weaving Stories through <a>Fashion</a>, <a>Visual Design</a>, and <a>Social Research</a></p>
                 </div>
-                <!-- <img src="/media/_DSC6992.JPG" alt=""> -->
+                <!-- <img src="/media/front_and_back.webp" alt=""> -->
                 <aside class="aside-home">
 
                 </aside>
@@ -59,7 +74,7 @@
         </div>
         <canvas id="myCanvas"></canvas>
     </div>
-
+    <script src="/js/script.js"></script>
     <script src="/js/canvas.js"></script>
     <script src="/libraries/p5.min.js"></script>
     <script src="/libraries/p5.sound.min.js"></script>

@@ -5,6 +5,9 @@
 
    - The Streets
    - DJ Supreme X
+      -  Demo
+      - Eleyjah
+      
    - MyZen Guesthouse
    - Indigenous
 
