@@ -3,25 +3,30 @@
 
 1. Projects
 
-   - The Streets
-   - DJ Supreme X
+   -  The Streets
+   -  DJ Supreme X
       -  Demo
-      - Eleyjah
+      -  Eleyjah
       
-   - MyZen Guesthouse
-   - Indigenous
+   -  MyZen Guesthouse
+   -  Indigenous
+   -  Water
 
 2. Practice
 
    - Fashion
-   - Toile Making
-   - Hand-sewing
+      - Toile Making
+      - Hand-sewing
    - Zine-making
-   - Data Analysis
-   - Information Design
+   -  Research & Insights
+      -  Investigative 
+      -  Data Analysis
+      -  Computational Social Sciences
+      - Information Design
    - Visual Design
+      -  Album artwork
 
-3. Insights...
+3. Journal
 
 4. About
 

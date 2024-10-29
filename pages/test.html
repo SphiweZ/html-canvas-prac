@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Responsive Bubble Animation</title>
+  <style>
+    /* Fullscreen container */
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      background: linear-gradient(to bottom, #002f4b, #dc4225);
+    }
+    /* Bubble styles */
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: float 5s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    /* Bubble float animation */
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Media query to adjust bubble sizes */
+    @media (max-width: 600px) {
+      .bubble { width: 40px; height: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  // Function to create and animate bubbles
+  function createBubble() {
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+    
+    // Randomize size and position
+    const size = Math.random() * 60 + 10; // between 10px and 70px
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+    bubble.style.backgroundColor = `rgba(255, 255, 255, ${Math.random() * 0.7 + 0.3})`;
+    
+    // Initial position of the bubble
+    bubble.style.top = `${Math.random() * 100}%`;
+    bubble.style.left = `${Math.random() * 100}%`;
+    
+    document.body.appendChild(bubble);
+  }
+
+  // Create multiple bubbles
+  for (let i = 0; i < 15; i++) {
+    createBubble();
+  }
+
+  // Event listener for device orientation
+  window.addEventListener('deviceorientation', (event) => {
+    const { beta, gamma } = event;
+
+    // Adjust movement strength
+    const strength = 0.5;
+
+    // Move each bubble based on tilt
+    document.querySelectorAll('.bubble').forEach((bubble, index) => {
+      // Adjust position based on device tilt
+      const xMove = gamma * strength * (index % 2 === 0 ? 1 : -1); // Alternate left/right
+      const yMove = beta * strength * (index % 2 === 0 ? -1 : 1);  // Alternate up/down
+      bubble.style.transform = `translate(${xMove}px, ${yMove}px)`;
+    });
+  });
+</script>
+
+</body>
+</html>

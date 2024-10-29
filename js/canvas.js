@@ -13,9 +13,9 @@ const pointer = {
     y: .1 * window.innerHeight,
 }
 const params = {
-    pointsNumber: 15,
-    widthFactor: .5,
-    mouseThreshold: .8,
+    pointsNumber: 5,
+    widthFactor: 1,
+    mouseThreshold: .5,
     spring: .4,
     friction: .5,
 };
@@ -56,14 +56,14 @@ function update(t) {
 
     // for intro motion
     if (!mouseMoved) {
-        pointer.x = (.5 + .3 * Math.cos(.02 * t) * (Math.sin(.05 * t))) * window.innerWidth;
-        pointer.y = (.5 + .2 * (Math.cos(.05 * t)) + .1 * Math.cos(.01 * t)) * window.innerHeight;
+        pointer.x = (.5 + .5 * Math.cos(.05 * t) * (Math.sin(.05 * t))) * window.innerWidth;
+        pointer.y = (.5 + .5 * (Math.cos(.05 * t)) + .5 * Math.cos(.05 * t)) * window.innerHeight;
     }
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     trail.forEach((p, pIdx) => {
         const prev = pIdx === 0 ? pointer : trail[pIdx - 1];
-        const spring = pIdx === 0 ? .4 * params.spring : params.spring;
+        const spring = pIdx === 0 ? .5 * params.spring : params.spring;
         p.dx += (prev.x - p.x) * spring;
         p.dy += (prev.y - p.y) * spring;
         p.dx *= params.friction;
