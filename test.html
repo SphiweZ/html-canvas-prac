@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .blog-post {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .blog-post:hover {
+            transform: scale(1.02);
+        }
+
+        .blog-post img {
+            max-width: 150px;
+            max-height: 100px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .blog-content {
+            flex: 1;
+        }
+
+        .blog-title {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .blog-excerpt {
+            margin: 10px 0;
+        }
+
+        .blog-date {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .read-more {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blog</h1>
+        <!-- Blog Post 1 -->
+        <div class="blog-post">
+            <img src="images/post1-thumbnail.jpg" alt="Post 1 Thumbnail">
+            <div class="blog-content">
+                <p class="blog-date">Published on: November 20, 2024</p>
+                <h2 class="blog-title">The Role of Python in Social Research</h2>
+                <p class="blog-excerpt">Discover how Python empowers social researchers to manage, analyze, and interpret complex datasets...</p>
+                <a class="read-more" href="post1.html">Read More</a>
+            </div>
+        </div>
+        <!-- Blog Post 2 -->
+        <div class="blog-post">
+            <img src="images/post2-thumbnail.jpg" alt="Post 2 Thumbnail">
+            <div class="blog-content">
+                <p class="blog-date">Published on: November 18, 2024</p>
+                <h2 class="blog-title">Analyzing Social Media with Python</h2>
+                <p class="blog-excerpt">Learn how Python can be used to extract, process, and analyze data from popular social media platforms...</p>
+                <a class="read-more" href="post2.html">Read More</a>
+            </div>
+        </div>
+        <!-- Blog Post 3 -->
+        <div class="blog-post">
+            <img src="images/post3-thumbnail.jpg" alt="Post 3 Thumbnail">
+            <div class="blog-content">
+                <p class="blog-date">Published on: November 15, 2024</p>
+                <h2 class="blog-title">Data Visualization in Social Research</h2>
+                <p class="blog-excerpt">Explore how Python libraries like Matplotlib and Seaborn can transform complex data into meaningful insights...</p>
+                <a class="read-more" href="post3.html">Read More</a>
+            </div>
+        </div>
+        <!-- Add more posts here as needed -->
+    </div>
+</body>
+</html>
