@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 const ctx = canvas.getContext('2d');
 
 // for intro motion
-let mouseMoved = false;
+let mouseMoved = true;
 
 const pointer = {
     x: .1 * window.innerWidth,
