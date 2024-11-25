@@ -7,7 +7,6 @@
 * {
     max-height: 100%;
     box-sizing:border-box;
-    font-family: "Noto Sans Mono";
 }
 
 html {
@@ -15,6 +14,7 @@ html {
     margin: 0;
     overflow-x: hidden;
     max-width: 100dvw;
+    font-family: "Noto Sans Mono";
 }
 
 body {
@@ -63,7 +63,6 @@ nav {
 .menu-item{
     text-align: right;
     text-decoration: none;
-    font-family: monospace;
     font-size: clamp(1.1rem, 18px, 1.25rem);
     font-weight: 500;
     color: black;
@@ -105,6 +104,12 @@ li {
 
 .project-info {
     padding: 0 10dvw;
+}
+
+.contact {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-line: underline;
 }
 
 p {
@@ -196,7 +201,6 @@ footer {
     flex-direction: column;
     background-color: white;
     color: black;
-    font-family: monospace;
     z-index: 1000;
     transition: opacity 0.8s ease, visibility 0.8s ease;
     opacity: 1;
